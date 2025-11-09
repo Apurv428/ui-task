@@ -13,8 +13,7 @@ const MobileDashboard = () => {
 
 
     return (
-        <div className="w-full max-w-md mx-auto h-screen bg-gray-50 flex flex-col relative">
-
+        <div className="w-full h-screen bg-gray-50 flex flex-col relative">
             <div className="bg-white p-2 shadow-sm">
                 <div className="flex items-center justify-between">
                     <button className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-50 hover:bg-gray-100 transition-colors">

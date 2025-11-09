@@ -31,7 +31,7 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
 
                 <div className="flex items-center space-x-4">
                     <div className="flex overflow-hidden rounded-lg">
-                        <button className="px-3 py-1 font-semibold text-gray-900 bg-white shadow-lg rounded-md transform -translate-y-1 z-10">
+                        <button className="px-3 py-1 font-semibold text-gray-900 bg-white shadow-md rounded-md transform -translate-y-1 z-10">
                             Day
                         </button>
                         <button className="px-3 py-1 text-gray-700">Week</button>
