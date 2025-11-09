@@ -29,7 +29,7 @@ const MobileDashboard = () => {
                 </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto py-6">
+            <div className="flex-1 overflow-y-auto py-4">
                 <div className="mb-2">
                     <div className="overflow-x-auto scrollbar-hide">
                         <div className="flex gap-4 px-6 min-w-max">
