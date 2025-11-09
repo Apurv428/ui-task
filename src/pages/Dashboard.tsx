@@ -1,0 +1,65 @@
+import { Search } from '../components/icons';
+
+// UI Components
+import { UserProfile } from '../components/dashboard/UserProfile';
+import { Sidebar } from '../components/dashboard/Sidebar';
+import { MessageList } from '../components/dashboard/MessageList';
+import { ConversionChart } from '../components/dashboard/ConversionChart';
+import { StatCards } from '../components/dashboard/StatCards';
+import { SalesTable } from '../components/dashboard/SalesTable';
+
+import DashboardData from './DashboardData';
+
+
+const Dashboard: React.FC = () => {
+  const { messages, sales, stats } = DashboardData();
+
+  return (
+    <div className="flex min-h-screen bg-gray-50">
+      <Sidebar />
+
+      <div className="flex-1 flex">
+        <div className="w-80 bg-white p-6">
+          <UserProfile />
+          <MessageList messages={messages} />
+          <div className="mt-2">
+            <ConversionChart />
+          </div>
+        </div>
+
+        <div className="flex-1 p-6">
+          <div className="mb-2 flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <button className="w-10 h-10 bg-gray-100 flex flex-col items-center justify-center space-y-1 hover:bg-gray-400">
+                <span className="block w-5 h-0.5 bg-gray-400"></span>
+                <span className="block w-5 h-0.5 bg-gray-400"></span>
+                <span className="block w-5 h-0.5 bg-gray-400"></span>
+              </button>
+
+              <h1 className="text-xl font-bold text-gray-900">Dashboard</h1>
+            </div>
+
+            <div className="flex items-center justify-end space-x-2">
+              <div className="w-full flex justify-end">
+                <button className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600">
+                  <Search className="w-5 h-5 transform rotate-12" />
+                </button>
+              </div>
+              <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-400">
+                <div className="w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center">
+                  <span className="text-gray-400 text-base font-bold leading-none">+</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <StatCards stats={stats} />
+          <SalesTable sales={sales} />
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
