@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import MobileDashboard from "./pages/MobileDashboard";
