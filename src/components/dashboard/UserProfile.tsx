@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '../ui';
+import logo from '../../assets/logo_sidebar.png';
 
 export const UserProfile: React.FC = () => {
     return (
@@ -8,7 +9,7 @@ export const UserProfile: React.FC = () => {
             <CardContent className="p-0">
                 <div className="flex items-center mb-2">
                     <img
-                        src="/src/assets/logo_sidebar.png"
+                        src={logo}
                         alt="Logo"
                         className="h-28 w-auto object-contain"
                     />

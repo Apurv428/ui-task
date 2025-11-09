@@ -13,6 +13,8 @@ import {
     Package,
     UserLock
 } from '../icons';
+import logo from '../../assets/logo_sidebar.png';
+
 
 export const Sidebar: React.FC = () => {
     const menuItems = [
@@ -34,7 +36,7 @@ export const Sidebar: React.FC = () => {
         <div className="w-20 bg-white border-r border-gray-200 flex flex-col items-center py-6 space-y-6 fixed top-0 left-0 h-screen z-50 relative">
 
             <img
-                src="/src/assets/logo_sidebar.png"
+                src={logo}
                 alt="Wave graphic"
                 className="h-10 w-auto object-contain"
             />

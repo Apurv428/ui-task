@@ -1,5 +1,6 @@
 import React from 'react';
 import { PieChart } from '../icons';
+import chartHistory from '../../assets/chart_history.png';
 
 export const ConversionChart: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ export const ConversionChart: React.FC = () => {
       <div className="h-30">
 
         <img
-          src="/src/assets/chart_history.png"
+          src={chartHistory}
           alt="Wave graphic"
           className="w-full h-full object-cover"
         />
