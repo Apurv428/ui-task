@@ -1,7 +1,7 @@
 import { Search } from '../components/icons';
 
 import { UserProfile } from '../components/dashboard/UserProfile';
-import { Sidebar } from '../components/dashboard/Sidebar';
+import { Sidebar } from '../components/common/Sidebar';
 import { MessageList } from '../components/dashboard/MessageList';
 import { ConversionChart } from '../components/dashboard/ConversionChart';
 import { StatCards } from '../components/dashboard/StatCards';

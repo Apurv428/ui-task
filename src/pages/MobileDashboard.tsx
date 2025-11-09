@@ -2,7 +2,7 @@ import { useState } from "react";
 import DashboardData from "../data/DashboardData";
 import { BriefcaseBusiness, Calendar, CalendarDays, ClipboardCheck, Menu, MessageSquare, Search, UserLock } from '../components/icons';
 import { StatCards } from "../components/dashboard/StatCards";
-import BottomNavItem from "../components/dashboard/BottomNavItem";
+import BottomNavItem from "../components/common/BottomNavItem";
 import ProductItem from "../components/dashboard/ProductItem";
 import TabButton from "../components/dashboard/TabButton";
 
