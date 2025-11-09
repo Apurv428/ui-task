@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react';
+import type { ReactElement } from "react";
 
 export interface Sale {
   id: string;
@@ -7,9 +7,9 @@ export interface Sale {
   customer: string;
   email: string;
   delivery: string;
-  location: string,
+  location: string;
   address: string;
-  status: 'Shipped' | 'Processing' | 'Cancelled';
+  status: "Shipped" | "Processing" | "Cancelled";
   subtotal: string;
   shipping: string;
   total: string;
@@ -28,7 +28,7 @@ export interface StatCard {
   title: string;
   value: string;
   icon: ReactElement;
-  trend?: 'up' | 'down';
-  bgColor?: string; 
-  iconColor?: string;   
+  trend?: "up" | "down";
+  bgColor?: string;
+  iconColor?: string;
 }

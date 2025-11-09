@@ -4,11 +4,10 @@
 @import "tailwindcss";
 
 @layer components {
-  
   .card {
     @apply bg-white rounded-md shadow-sm;
   }
-  
+
   .input {
     @apply px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none;
   }
@@ -20,7 +19,7 @@
 
 .scrollbar-hide {
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 .loading,

@@ -23,5 +23,5 @@ export {
   TrendingUp,
   UserLock,
   Users,
-  Search
-} from 'lucide-react';
+  Search,
+} from "lucide-react";

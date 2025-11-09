@@ -1,26 +1,26 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from './Badge';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Badge } from "./Badge";
 
 const meta = {
-  title: 'Components/Badge',
+  title: "Components/Badge",
   component: Badge,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: 'select',
-      options: ['default', 'success', 'warning', 'error'],
-      description: 'The visual style variant of the badge',
+      control: "select",
+      options: ["default", "success", "warning", "error"],
+      description: "The visual style variant of the badge",
     },
     children: {
-      control: 'text',
-      description: 'The content to display inside the badge',
+      control: "text",
+      description: "The content to display inside the badge",
     },
     className: {
-      control: 'text',
-      description: 'Additional CSS classes to apply',
+      control: "text",
+      description: "Additional CSS classes to apply",
     },
   },
 } satisfies Meta<typeof Badge>;
@@ -31,39 +31,39 @@ type Story = StoryObj<typeof meta>;
 // Default story
 export const Default: Story = {
   args: {
-    variant: 'default',
-    children: 'Default Badge',
+    variant: "default",
+    children: "Default Badge",
   },
 };
 
 // Success variant
 export const Success: Story = {
   args: {
-    variant: 'success',
-    children: 'Success',
+    variant: "success",
+    children: "Success",
   },
 };
 
 // Warning variant
 export const Warning: Story = {
   args: {
-    variant: 'warning',
-    children: 'Warning',
+    variant: "warning",
+    children: "Warning",
   },
 };
 
 // Error variant
 export const Error: Story = {
   args: {
-    variant: 'error',
-    children: 'Error',
+    variant: "error",
+    children: "Error",
   },
 };
 
 // All variants showcase
 export const AllVariants: Story = {
   args: {
-    children: 'Badge',
+    children: "Badge",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
@@ -78,7 +78,7 @@ export const AllVariants: Story = {
 // Status examples
 export const StatusExamples: Story = {
   args: {
-    children: 'Badge',
+    children: "Badge",
   },
   render: () => (
     <div className="flex flex-col gap-3">
@@ -105,7 +105,7 @@ export const StatusExamples: Story = {
 // Different text lengths
 export const TextLengths: Story = {
   args: {
-    children: 'Badge',
+    children: "Badge",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
@@ -120,7 +120,7 @@ export const TextLengths: Story = {
 // Custom styling with className
 export const CustomStyling: Story = {
   args: {
-    children: 'Badge',
+    children: "Badge",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
@@ -143,7 +143,7 @@ export const CustomStyling: Story = {
 // In table context (like your SalesTable)
 export const InTableContext: Story = {
   args: {
-    children: 'Badge',
+    children: "Badge",
   },
   render: () => (
     <div className="w-full max-w-2xl">

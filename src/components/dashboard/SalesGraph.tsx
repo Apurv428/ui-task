@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardContent, Button } from '../ui';
+import React from "react";
+import { Card, CardContent, Button } from "../ui";
 
 export const SalesGraph: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const SalesGraph: React.FC = () => {
             <Button variant="ghost">Yearly</Button>
           </div>
         </div>
-        
+
         <div className="w-full h-64 bg-gray-100 rounded-md flex items-center justify-center">
           Graph Content
         </div>

@@ -1,36 +1,36 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
-import { Search, Plus, Settings, Trash2, Download, Upload } from 'lucide-react';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./Button";
+import { Search, Plus, Settings, Trash2, Download, Upload } from "lucide-react";
 
 const meta = {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     variant: {
-      control: 'select',
-      options: ['primary', 'secondary', 'icon', 'outline', 'ghost'],
-      description: 'The visual style variant of the button',
+      control: "select",
+      options: ["primary", "secondary", "icon", "outline", "ghost"],
+      description: "The visual style variant of the button",
     },
     size: {
-      control: 'select',
-      options: ['sm', 'md', 'lg', 'icon'],
-      description: 'The size of the button',
+      control: "select",
+      options: ["sm", "md", "lg", "icon"],
+      description: "The size of the button",
     },
     loading: {
-      control: 'boolean',
-      description: 'Shows loading spinner and disables interaction',
+      control: "boolean",
+      description: "Shows loading spinner and disables interaction",
     },
     disabled: {
-      control: 'boolean',
-      description: 'Disables the button',
+      control: "boolean",
+      description: "Disables the button",
     },
     children: {
-      control: 'text',
-      description: 'The content to display inside the button',
+      control: "text",
+      description: "The content to display inside the button",
     },
   },
 } satisfies Meta<typeof Button>;
@@ -41,16 +41,16 @@ type Story = StoryObj<typeof meta>;
 // Default story
 export const Default: Story = {
   args: {
-    variant: 'primary',
-    size: 'md',
-    children: 'Button',
+    variant: "primary",
+    size: "md",
+    children: "Button",
   },
 };
 
 // All Variants
 export const AllVariants: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
@@ -66,7 +66,7 @@ export const AllVariants: Story = {
 // All Sizes
 export const AllSizes: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-wrap items-center gap-4">
@@ -80,18 +80,28 @@ export const AllSizes: Story = {
 // Primary Variants
 export const Primary: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex gap-4">
-        <Button variant="primary" size="sm">Small Primary</Button>
-        <Button variant="primary" size="md">Medium Primary</Button>
-        <Button variant="primary" size="lg">Large Primary</Button>
+        <Button variant="primary" size="sm">
+          Small Primary
+        </Button>
+        <Button variant="primary" size="md">
+          Medium Primary
+        </Button>
+        <Button variant="primary" size="lg">
+          Large Primary
+        </Button>
       </div>
       <div className="flex gap-4">
-        <Button variant="primary" disabled>Disabled</Button>
-        <Button variant="primary" loading>Loading</Button>
+        <Button variant="primary" disabled>
+          Disabled
+        </Button>
+        <Button variant="primary" loading>
+          Loading
+        </Button>
       </div>
     </div>
   ),
@@ -100,18 +110,28 @@ export const Primary: Story = {
 // Secondary Variants
 export const Secondary: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex gap-4">
-        <Button variant="secondary" size="sm">Small Secondary</Button>
-        <Button variant="secondary" size="md">Medium Secondary</Button>
-        <Button variant="secondary" size="lg">Large Secondary</Button>
+        <Button variant="secondary" size="sm">
+          Small Secondary
+        </Button>
+        <Button variant="secondary" size="md">
+          Medium Secondary
+        </Button>
+        <Button variant="secondary" size="lg">
+          Large Secondary
+        </Button>
       </div>
       <div className="flex gap-4">
-        <Button variant="secondary" disabled>Disabled</Button>
-        <Button variant="secondary" loading>Loading</Button>
+        <Button variant="secondary" disabled>
+          Disabled
+        </Button>
+        <Button variant="secondary" loading>
+          Loading
+        </Button>
       </div>
     </div>
   ),
@@ -120,7 +140,7 @@ export const Secondary: Story = {
 // Icon Buttons
 export const IconButtons: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
@@ -146,7 +166,7 @@ export const IconButtons: Story = {
 // Buttons with Icons
 export const WithIcons: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
@@ -181,7 +201,7 @@ export const WithIcons: Story = {
 // Loading States
 export const LoadingStates: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
@@ -211,14 +231,22 @@ export const LoadingStates: Story = {
 // Disabled States
 export const DisabledStates: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">
-      <Button variant="primary" disabled>Primary Disabled</Button>
-      <Button variant="secondary" disabled>Secondary Disabled</Button>
-      <Button variant="outline" disabled>Outline Disabled</Button>
-      <Button variant="ghost" disabled>Ghost Disabled</Button>
+      <Button variant="primary" disabled>
+        Primary Disabled
+      </Button>
+      <Button variant="secondary" disabled>
+        Secondary Disabled
+      </Button>
+      <Button variant="outline" disabled>
+        Outline Disabled
+      </Button>
+      <Button variant="ghost" disabled>
+        Ghost Disabled
+      </Button>
       <Button variant="icon" size="icon" disabled>
         <Settings className="w-5 h-5" />
       </Button>
@@ -229,18 +257,28 @@ export const DisabledStates: Story = {
 // Outline Buttons
 export const Outline: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex gap-4">
-        <Button variant="outline" size="sm">Small Outline</Button>
-        <Button variant="outline" size="md">Medium Outline</Button>
-        <Button variant="outline" size="lg">Large Outline</Button>
+        <Button variant="outline" size="sm">
+          Small Outline
+        </Button>
+        <Button variant="outline" size="md">
+          Medium Outline
+        </Button>
+        <Button variant="outline" size="lg">
+          Large Outline
+        </Button>
       </div>
       <div className="flex gap-4">
-        <Button variant="outline" disabled>Disabled</Button>
-        <Button variant="outline" loading>Loading</Button>
+        <Button variant="outline" disabled>
+          Disabled
+        </Button>
+        <Button variant="outline" loading>
+          Loading
+        </Button>
       </div>
     </div>
   ),
@@ -249,18 +287,28 @@ export const Outline: Story = {
 // Ghost Buttons
 export const Ghost: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex gap-4">
-        <Button variant="ghost" size="sm">Small Ghost</Button>
-        <Button variant="ghost" size="md">Medium Ghost</Button>
-        <Button variant="ghost" size="lg">Large Ghost</Button>
+        <Button variant="ghost" size="sm">
+          Small Ghost
+        </Button>
+        <Button variant="ghost" size="md">
+          Medium Ghost
+        </Button>
+        <Button variant="ghost" size="lg">
+          Large Ghost
+        </Button>
       </div>
       <div className="flex gap-4">
-        <Button variant="ghost" disabled>Disabled</Button>
-        <Button variant="ghost" loading>Loading</Button>
+        <Button variant="ghost" disabled>
+          Disabled
+        </Button>
+        <Button variant="ghost" loading>
+          Loading
+        </Button>
       </div>
     </div>
   ),
@@ -269,7 +317,7 @@ export const Ghost: Story = {
 // Real World Examples
 export const RealWorldExamples: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-col gap-6 p-6 bg-gray-50 rounded-lg">
@@ -322,8 +370,12 @@ export const RealWorldExamples: Story = {
       <div className="bg-white p-4 rounded-lg">
         <h3 className="text-sm font-semibold mb-3">Submitting Form</h3>
         <div className="flex gap-2 justify-end">
-          <Button variant="ghost" disabled>Cancel</Button>
-          <Button variant="primary" loading>Submitting...</Button>
+          <Button variant="ghost" disabled>
+            Cancel
+          </Button>
+          <Button variant="primary" loading>
+            Submitting...
+          </Button>
         </div>
       </div>
     </div>
@@ -333,7 +385,7 @@ export const RealWorldExamples: Story = {
 // Custom Styling
 export const CustomStyling: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: () => (
     <div className="flex flex-wrap gap-4">

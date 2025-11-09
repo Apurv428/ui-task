@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardContent, Badge } from '../ui';
+import React from "react";
+import { Card, CardContent, Badge } from "../ui";
 
 export const Stats: React.FC = () => {
   return (

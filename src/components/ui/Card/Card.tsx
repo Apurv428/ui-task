@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '../../../utils/cn';
+import React from "react";
+import { cn } from "../../../utils/cn";
 
 interface CardProps {
   className?: string;
@@ -8,7 +8,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ className, children }) => {
   return (
-    <div className={cn('bg-white rounded-md shadow-sm', className)}>
+    <div className={cn("bg-white rounded-md shadow-sm", className)}>
       {children}
     </div>
   );
@@ -16,23 +16,19 @@ export const Card: React.FC<CardProps> = ({ className, children }) => {
 
 export const CardHeader: React.FC<CardProps> = ({ className, children }) => {
   return (
-    <div className={cn('p-4 border-b border-gray-100', className)}>
+    <div className={cn("p-4 border-b border-gray-100", className)}>
       {children}
     </div>
   );
 };
 
 export const CardContent: React.FC<CardProps> = ({ className, children }) => {
-  return (
-    <div className={cn('p-6', className)}>
-      {children}
-    </div>
-  );
+  return <div className={cn("p-6", className)}>{children}</div>;
 };
 
 export const CardFooter: React.FC<CardProps> = ({ className, children }) => {
   return (
-    <div className={cn('p-4 border-t border-gray-100', className)}>
+    <div className={cn("p-4 border-t border-gray-100", className)}>
       {children}
     </div>
   );

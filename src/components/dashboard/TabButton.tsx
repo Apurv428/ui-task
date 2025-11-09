@@ -6,7 +6,11 @@ interface TabButtonProps {
   onClick?: () => void;
 }
 
-const TabButton: React.FC<TabButtonProps> = ({ active = false, children, onClick }) => {
+const TabButton: React.FC<TabButtonProps> = ({
+  active = false,
+  children,
+  onClick,
+}) => {
   return (
     <button
       onClick={onClick}

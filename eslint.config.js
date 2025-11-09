@@ -1,3 +1,6 @@
+import prettierPlugin from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
+
 import js from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
@@ -25,7 +28,6 @@ export default [
         HTMLDivElement: true,
         SVGSVGElement: true,
         HTMLButtonElement: true,
-
         __dirname: true,
         module: true,
         require: true,
@@ -37,15 +39,22 @@ export default [
       react: pluginReact,
       "react-hooks": pluginReactHooks,
       storybook: pluginStorybook,
+      prettier: prettierPlugin,
     },
     settings: {
       react: { version: "detect" },
     },
+    extends: [
+      ...pluginReact.configs.recommended.extends,
+      ...pluginReactHooks.configs.recommended.extends,
+      ...pluginStorybook.configs.recommended.extends,
+      "prettier", 
+    ],
     rules: {
       ...pluginReact.configs.recommended.rules,
       ...pluginReactHooks.configs.recommended.rules,
       ...pluginStorybook.configs.recommended.rules,
-
+      "prettier/prettier": "error",
       "react/react-in-jsx-scope": "off",
       "react/no-unescaped-entities": "off",
       "react/display-name": "off",

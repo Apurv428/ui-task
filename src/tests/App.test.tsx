@@ -18,7 +18,10 @@ describe("App Component", () => {
   });
 
   test("renders Desktop Dashboard on large screens", () => {
-    Object.defineProperty(window, "innerWidth", { writable: true, value: 1024 });
+    Object.defineProperty(window, "innerWidth", {
+      writable: true,
+      value: 1024,
+    });
     render(<App />);
     expect(screen.getByTestId("dashboard")).toBeInTheDocument();
   });
