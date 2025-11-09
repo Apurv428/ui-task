@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Avatar } from '../ui';
+import { Card, CardContent } from '../ui';
 
 export const UserProfile: React.FC = () => {
     return (

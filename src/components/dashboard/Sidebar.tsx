@@ -56,12 +56,11 @@ export const Sidebar: React.FC = () => {
                     </div>
                 ))}
 
-                {/* User avatar */}
                 <div className="relative w-10 h-10 mt-auto">
                     <img
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
                         alt="User"
-                        className="w-full h-full object-cover rounded-lg" // square with rounded corners
+                        className="w-full h-full object-cover rounded-lg"
                     />
                     <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold">
                         ✓
