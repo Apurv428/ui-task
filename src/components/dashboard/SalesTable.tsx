@@ -173,7 +173,7 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
           variant="ghost"
           size="sm"
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === 1}
+          disabled={currentPage === totalPages}
           className="bg-gray-100 px-4 py-2 hover:bg-gray-400 flex items-center space-x-1 rounded-sm"
         >
           <span className="text-gray-900">NEXT</span>
