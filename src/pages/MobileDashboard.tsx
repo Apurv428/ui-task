@@ -1,0 +1,112 @@
+import { useState } from "react";
+import DashboardData from "../data/DashboardData";
+import { BriefcaseBusiness, Calendar, CalendarDays, ClipboardCheck, Menu, MessageSquare, Search, UserLock } from '../components/icons';
+import { StatCards } from "../components/dashboard/StatCards";
+import BottomNavItem from "../components/dashboard/BottomNavItem";
+import ProductItem from "../components/dashboard/ProductItem";
+import TabButton from "../components/dashboard/TabButton";
+
+const MobileDashboard = () => {
+    const [activeTab, setActiveTab] = useState('Day');
+    const [activeNav, setActiveNav] = useState('home');
+    const { sales, stats } = DashboardData();
+
+
+    return (
+        <div className="w-full max-w-md mx-auto h-screen bg-gray-50 flex flex-col relative">
+            <div className="bg-white px-6 pt-3 pb-2">
+                <div className="flex items-center justify-between text-sm">
+                    <span className="font-semibold">9:41</span>
+                    <div className="flex items-center gap-1">
+                        <div className="flex gap-0.5">
+                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
+                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
+                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
+                            <div className="w-1 h-3 bg-gray-400 rounded-sm"></div>
+                        </div>
+                        <svg className="w-4 h-3" fill="currentColor" viewBox="0 0 20 14">
+                            <path d="M18 0H2C0.9 0 0 0.9 0 2v10c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V2c0-1.1-0.9-2-2-2zm0 12H2V2h16v10z" />
+                        </svg>
+                        <div className="w-6 h-3 bg-gray-900 rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-white px-6 py-4 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                    <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <Search className="w-5 h-5 text-gray-600" />
+                    </button>
+                    <h1 className="text-xl font-bold text-gray-900">Dashboard</h1>
+                    <button className="w-10 h-10 rounded-md bg-gray-100 flex items-center justify-center">
+                        <div className="w-5 h-5 rounded-full border-2 border-gray-400 flex items-center justify-center">
+                            <span className="text-gray-400 text-base font-medium mb-1">+</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div className="flex-1 overflow-y-auto py-6">
+                <div className="mb-6">
+                    <div className="overflow-x-auto scrollbar-hide">
+                        <div className="flex gap-4 px-6 min-w-max">
+                            <StatCards stats={stats} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Latest Sales Section */}
+                <div className="mb-6 px-6">
+                    <h2 className="text-lg font-bold text-gray-900 mb-4">Latest sales</h2>
+
+                    <div className="flex gap-3 mb-4 bg-white rounded-xl p-1">
+                        {['Day', 'Week', 'Month'].map(tab => (
+                            <TabButton
+                                key={tab}
+                                active={activeTab === tab}
+                                onClick={() => setActiveTab(tab)}
+                            >
+                                {tab}
+                            </TabButton>
+                        ))}
+                        <button className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                            <Calendar className="w-5 h-5" />
+                        </button>
+                    </div>
+
+                    {/* Product List */}
+                    <div className="space-y-3">
+                        {sales.map((product, idx) => (
+                            <ProductItem key={idx} {...product} />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Pagination Dots */}
+                <div className="flex justify-center gap-2 mb-6">
+                    <div className="w-8 h-1 bg-blue-500 rounded-full"></div>
+                    <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+                    <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+                </div>
+            </div>
+
+            {/* Bottom Navigation */}
+            <div className="bg-white border-t border-gray-200 safe-area-bottom">
+                <div className="flex items-center px-4">
+                    <BottomNavItem icon={MessageSquare} active={activeNav === 'home'} onClick={() => setActiveNav('home')} />
+                    <BottomNavItem icon={BriefcaseBusiness} active={activeNav === 'projects'} onClick={() => setActiveNav('projects')} />
+                    <BottomNavItem icon={ClipboardCheck} active={activeNav === 'tasks'} onClick={() => setActiveNav('tasks')} />
+                    <BottomNavItem icon={CalendarDays} active={activeNav === 'payments'} onClick={() => setActiveNav('payments')} />
+                    <BottomNavItem icon={UserLock} active={activeNav === 'analytics'} onClick={() => setActiveNav('analytics')} />
+                    <BottomNavItem icon={Menu} active={activeNav === 'menu'} onClick={() => setActiveNav('menu')} />
+                </div>
+
+                <div className="flex justify-center py-2">
+                    <div className="w-32 h-1 bg-gray-900 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default MobileDashboard;
