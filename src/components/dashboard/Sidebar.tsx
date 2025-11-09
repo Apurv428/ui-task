@@ -48,7 +48,7 @@ export const Sidebar: React.FC = () => {
                             <div className="absolute top-0 right-0 h-12 w-1 bg-blue-600 rounded-l-full"></div>
                         )}
                         <button
-                            className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${item.active
+                            className={`w-12 h-12 rounded-md flex items-center justify-center transition-colors ${item.active
                                 ? 'bg-gradient-to-br from-blue-100 to-blue-200 text-blue-600'
                                 : 'text-gray-400 hover:bg-gray-50'
                                 }`}

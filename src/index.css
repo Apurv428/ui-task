@@ -6,7 +6,7 @@
 @layer components {
   
   .card {
-    @apply bg-white rounded-xl shadow-sm;
+    @apply bg-white rounded-md shadow-sm;
   }
   
   .input {

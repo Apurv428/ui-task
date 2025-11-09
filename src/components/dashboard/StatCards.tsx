@@ -15,7 +15,7 @@ const StatCard: React.FC<StatCardType> = ({ title, value, icon, trend, bgColor, 
             "
         >
             <div className="mb-3 sm:mb-0 sm:order-2 flex flex-col items-center">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${bgColor}`}>
+                <div className={`w-10 h-10 rounded-md flex items-center justify-center ${bgColor}`}>
                     <span className={`${iconColor} w-5 h-5 flex items-center justify-center`}>
                         {icon}
                     </span>

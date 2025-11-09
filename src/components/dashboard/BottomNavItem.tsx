@@ -18,7 +18,7 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
         active ? "text-blue-500" : "text-gray-400"
       }`}
     >
-      <div className={`p-2 rounded-xl ${active ? "bg-blue-50" : ""}`}>
+      <div className={`p-2 rounded-md ${active ? "bg-blue-50" : ""}`}>
         <IconComponent className="w-6 h-6" />
       </div>
     </button>

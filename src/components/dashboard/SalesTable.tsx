@@ -64,7 +64,7 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
                                     <tr key={sale.id} className="hover:bg-gray-50 transition-colors">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center space-x-3">
-                                                <img src={sale.image} alt={sale.product} className="w-12 h-12 rounded-xl object-cover" />
+                                                <img src={sale.image} alt={sale.product} className="w-12 h-12 rounded-md object-cover" />
                                                 <div className="flex flex-col space-x-3">
                                                     <div className="font-medium text-gray-900">{sale.product}</div>
                                                     <div className="text-sm text-gray-500 text-left">{sale.productId}</div>

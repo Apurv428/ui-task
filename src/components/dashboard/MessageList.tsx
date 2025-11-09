@@ -15,12 +15,12 @@ export const MessageList: React.FC<{ messages: Message[] }> = ({ messages }) => 
 
 const MessageItem: React.FC<Message> = ({ name, avatar, message, time }) => {
   return (
-    <div className="flex space-x-3 p-3 hover:bg-gray-50 rounded-xl transition-colors cursor-pointer">
+    <div className="flex space-x-3 p-3 hover:bg-gray-50 rounded-md transition-colors cursor-pointer">
       <div className="relative w-10 h-10 flex-shrink-0">
         <img
           src={avatar}
           alt={name}
-          className="w-full h-full object-cover rounded-xl"
+          className="w-full h-full object-cover rounded-md"
         />
         <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold">
           ✓

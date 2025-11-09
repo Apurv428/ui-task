@@ -17,7 +17,7 @@ export const SalesGraph: React.FC = () => {
           </div>
         </div>
         
-        <div className="w-full h-64 bg-gray-100 rounded-xl flex items-center justify-center">
+        <div className="w-full h-64 bg-gray-100 rounded-md flex items-center justify-center">
           Graph Content
         </div>
       </CardContent>

@@ -17,7 +17,7 @@ const MobileDashboard = () => {
 
             <div className="bg-white p-2 shadow-sm">
                 <div className="flex items-center justify-between">
-                    <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <button className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-50 hover:bg-gray-100 transition-colors">
                         <Search className="w-5 h-5 text-gray-600 transform rotate-90" />
                     </button>
                     <h1 className="text-xl font-bold text-gray-900">Dashboard</h1>
@@ -40,7 +40,7 @@ const MobileDashboard = () => {
 
                 <div className="mb-6 px-6">
                     <h2 className="text-lg font-semibold text-gray-900 text-left">Latest sales</h2>
-                    <div className="flex gap-3 mb-4 rounded-xl p-1">
+                    <div className="flex gap-3 mb-4 rounded-md p-1">
                         {['Day', 'Week', 'Month'].map(tab => (
                             <TabButton
                                 key={tab}
@@ -50,7 +50,7 @@ const MobileDashboard = () => {
                                 {tab}
                             </TabButton>
                         ))}
-                        <button className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
+                        <button className="w-10 h-10 shrink-0 flex items-center justify-center rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
                             <Calendar className="w-5 h-5 text-gray-500" />
                         </button>
                     </div>
