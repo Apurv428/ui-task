@@ -8,7 +8,7 @@ import { ConversionChart } from '../components/dashboard/ConversionChart';
 import { StatCards } from '../components/dashboard/StatCards';
 import { SalesTable } from '../components/dashboard/SalesTable';
 
-import DashboardData from './DashboardData';
+import DashboardData from '../data/DashboardData';
 
 
 const Dashboard: React.FC = () => {
@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
         <div className="flex-1 p-6">
           <div className="mb-2 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <button className="w-10 h-10 bg-gray-100 flex flex-col items-center justify-center space-y-1 hover:bg-gray-400">
+              <button className="w-10 h-10 bg-gray-100 flex flex-col items-center justify-center space-y-1 hover:bg-gray-100 cursor-pointer">
                 <span className="block w-5 h-0.5 bg-gray-400"></span>
                 <span className="block w-5 h-0.5 bg-gray-400"></span>
                 <span className="block w-5 h-0.5 bg-gray-400"></span>
@@ -41,15 +41,19 @@ const Dashboard: React.FC = () => {
 
             <div className="flex items-center justify-end space-x-2">
               <div className="w-full flex justify-end">
-                <button className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600">
-                  <Search className="w-5 h-5 transform rotate-12" />
+                <button className="w-10 h-10 rounded-md bg-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-600">
+                  <Search className="w-5 h-5 transform rotate-90" />
                 </button>
               </div>
-              <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-400">
-                <div className="w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center">
-                  <span className="text-gray-400 text-base font-bold leading-none">+</span>
-                </div>
-              </button>
+              <div className="w-full flex justify-end">
+                <button className="w-10 h-10 rounded-md bg-gray-100 flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-full border-2 border-gray-400 flex items-center justify-center">
+                    <span className="text-gray-400 text-base font-medium mb-1">+</span>
+                  </div>
+                </button>
+              </div>
+
+
             </div>
           </div>
 

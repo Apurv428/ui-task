@@ -4,10 +4,8 @@ import type { Message } from '../../types';
 export const MessageList: React.FC<{ messages: Message[] }> = ({ messages }) => {
   return (
     <div className="bg-white rounded-3xl space-y-2">
-      {/* Header */}
-<h4 className="text-lg font-medium mb-2 text-left">Messages</h4>
+      <h4 className="text-lg font-medium mb-2 text-left">Messages</h4>
 
-      {/* Message list */}
       {messages.map((message) => (
         <MessageItem key={message.id} {...message} />
       ))}
@@ -29,7 +27,6 @@ const MessageItem: React.FC<Message> = ({ name, avatar, message, time }) => {
         </span>
       </div>
 
-      {/* Message content */}
       <div className="flex-1 min-w-0 flex flex-col justify-center text-left">
         <div className="flex items-center justify-between mb-1">
           <h4 className="font-semibold text-gray-900 text-sm truncate">{name}</h4>

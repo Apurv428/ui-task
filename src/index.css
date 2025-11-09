@@ -4,13 +4,6 @@
 @import "tailwindcss";
 
 @layer components {
-  .btn-primary {
-    @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors;
-  }
-  
-  .btn-secondary {
-    @apply px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors;
-  }
   
   .card {
     @apply bg-white rounded-xl shadow-sm;
@@ -19,16 +12,5 @@
   .input {
     @apply px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none;
   }
-  
-  .sidebar-icon {
-    @apply w-12 h-12 rounded-xl flex items-center justify-center transition-colors;
-  }
-  
-  .sidebar-icon-active {
-    @apply bg-gray-100 text-blue-500;
-  }
-  
-  .sidebar-icon-inactive {
-    @apply text-gray-400 hover:bg-gray-50;
-  }
+
 }

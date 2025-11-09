@@ -28,7 +28,7 @@ const DashboardData = () => {
     {
       id: '4',
       name: 'Olivia Brown',
-      avatar: 'https://images.unsplash.com/photo-1531891437562-8ecf0ed20d5c?w=100&h=100&fit=crop',
+      avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop',
       message: 'Success usually comes to those who are too busy to be looking for it.',
       time: '2h',
     },

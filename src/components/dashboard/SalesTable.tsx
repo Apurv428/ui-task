@@ -112,23 +112,26 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
                     disabled={currentPage === 1}
                     className="bg-gray-100 px-4 py-2 hover:bg-gray-400 flex items-center space-x-1 rounded-sm"
                 >
-                    <span>&lt;</span>
-                    <span>PREV</span>
+                    <span className="text-xl font-bold mb-1">&lt;</span>
+                    <span className='text-gray-900'>PREV</span>
                 </Button>
 
 
                 <div className="flex items-center space-x-2">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                        <Button
+                        <button
                             key={page}
-                            variant={page === currentPage ? 'primary' : 'ghost'}
-                            size="icon"
+                            className={`
+        px-3 py-1 rounded
+        ${page === currentPage ? 'bg-blue-200 text-blue-700' : 'bg-gray-100 text-black hover:bg-blue-100 hover:text-blue-800'}
+      `}
                             onClick={() => handlePageChange(page)}
                         >
                             {page}
-                        </Button>
+                        </button>
                     ))}
                 </div>
+
 
                 <Button
                     variant="ghost"
@@ -137,8 +140,8 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
                     disabled={currentPage === 1}
                     className="bg-gray-100 px-4 py-2 hover:bg-gray-400 flex items-center space-x-1 rounded-sm"
                 >
-                    <span>NEXT</span>
-                    <span>&gt;</span>
+                    <span className='text-gray-900'>NEXT</span>
+                    <span className="text-xl font-bold mb-1">&gt;</span>
 
                 </Button>
             </CardFooter>

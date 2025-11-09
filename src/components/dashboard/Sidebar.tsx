@@ -1,37 +1,47 @@
 import React from 'react';
 import {
+    BookCopy,
+    BriefcaseBusiness,
+    Calculator,
+    CalendarDays,
+    CircleDotDashed,
+    CircleQuestionMark,
+    ClipboardCheck,
+    Dam,
     MessageSquare,
-    CreditCard,
-    Calendar,
-    BarChart3,
-    Users,
-    Settings,
-    Bell,
-    Star,
+    MessageSquareDot,
+    Package,
+    UserLock
 } from '../icons';
-import { Avatar } from '../ui';
 
 export const Sidebar: React.FC = () => {
     const menuItems = [
         { icon: <MessageSquare className="w-5 h-5" />, active: true },
-        { icon: <CreditCard className="w-5 h-5" />, active: false },
-        { icon: <Calendar className="w-5 h-5" />, active: false },
-        { icon: <BarChart3 className="w-5 h-5" />, active: false },
-        { icon: <Users className="w-5 h-5" />, active: false },
-        { icon: <Settings className="w-5 h-5" />, active: false },
-        { icon: <Bell className="w-5 h-5" />, active: false },
-        { icon: <Star className="w-5 h-5" />, active: false },
+        { icon: <BriefcaseBusiness className="w-5 h-5" />, active: false },
+        { icon: <ClipboardCheck className="w-5 h-5" />, active: false },
+        { icon: <CalendarDays className="w-5 h-5" />, active: false },
+        { icon: <UserLock className="w-5 h-5" />, active: false },
+        { icon: <MessageSquareDot className="w-5 h-5" />, active: false },
+        { icon: <Package className="w-5 h-5" />, active: false },
+        { icon: <Calculator className="w-5 h-5" />, active: false },
+        { icon: <BookCopy className="w-5 h-5" />, active: false },
+        { icon: <CircleDotDashed className="w-5 h-5" />, active: false },
+        { icon: <Dam className="w-5 h-5" />, active: false },
+        { icon: <CircleQuestionMark className="w-5 h-5" />, active: false },
     ];
 
     return (
         <div className="w-20 bg-white border-r border-gray-200 flex flex-col items-center py-6 space-y-6 fixed top-0 left-0 h-screen z-50 relative">
-            <Avatar size="md" fallback="C" bgColor="bg-blue-500" />
 
-            {/* Menu items */}
-            <div className="flex-1 flex flex-col items-center space-y-4 mt-8 relative w-full">
+            <img
+                src="/src/assets/logo_sidebar.png"
+                alt="Wave graphic"
+                className="h-10 w-auto object-contain"
+            />
+
+            <div className="flex-1 flex flex-col items-center mt-2 relative w-full">
                 {menuItems.map((item, idx) => (
                     <div key={idx} className="relative w-full flex justify-center">
-                        {/* Active indicator */}
                         {item.active && (
                             <div className="absolute top-0 right-0 h-12 w-1 bg-blue-600 rounded-l-full"></div>
                         )}

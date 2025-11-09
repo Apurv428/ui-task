@@ -4,14 +4,19 @@ import { Card, CardContent, Avatar } from '../ui';
 export const UserProfile: React.FC = () => {
     return (
         <Card className="mb-6 shadow-none">
+
             <CardContent className="p-0">
-                <div className="flex items-center space-x-4 mb-6">
-                    <Avatar size="xl" fallback="C" bgColor="bg-blue-500" />
+                <div className="flex items-center mb-2">
+                    <img
+                        src="/src/assets/logo_sidebar.png"
+                        alt="Logo"
+                        className="h-28 w-auto object-contain"
+                    />
                 </div>
 
                 <div className="mb-4 text-left">
-                    <p className="text-gray-500 text-sm">Welcome,</p>
-                    <h2 className="text-2xl font-bold text-gray-900">CRAFTUI</h2>
+                    <p className="text-gray-500 text-xl">Welcome,</p>
+                    <h2 className="text-2xl font-semibold text-gray-900">CRAFTUI</h2>
                 </div>
             </CardContent>
         </Card>
