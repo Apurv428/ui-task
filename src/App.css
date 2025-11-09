@@ -5,6 +5,14 @@ html, body, #root {
   overflow: hidden;
 }
 
+@media (min-width: 1024px) and (min-height: 401px) {
+  html,
+  body,
+  #root {
+    overflow: hidden;
+  }
+}
+
 #root {
   text-align: center;
 }
