@@ -14,25 +14,8 @@ const MobileDashboard = () => {
 
     return (
         <div className="w-full max-w-md mx-auto h-screen bg-gray-50 flex flex-col relative">
-            <div className="bg-white px-6 pt-3 pb-2">
-                <div className="flex items-center justify-between text-sm">
-                    <span className="font-semibold">9:41</span>
-                    <div className="flex items-center gap-1">
-                        <div className="flex gap-0.5">
-                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
-                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
-                            <div className="w-1 h-3 bg-gray-900 rounded-sm"></div>
-                            <div className="w-1 h-3 bg-gray-400 rounded-sm"></div>
-                        </div>
-                        <svg className="w-4 h-3" fill="currentColor" viewBox="0 0 20 14">
-                            <path d="M18 0H2C0.9 0 0 0.9 0 2v10c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V2c0-1.1-0.9-2-2-2zm0 12H2V2h16v10z" />
-                        </svg>
-                        <div className="w-6 h-3 bg-gray-900 rounded-sm"></div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="bg-white px-6 py-4 shadow-sm">
+            <div className="bg-white px-2 py-4 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                     <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
                         <Search className="w-5 h-5 text-gray-600" />
@@ -55,9 +38,8 @@ const MobileDashboard = () => {
                     </div>
                 </div>
 
-                {/* Latest Sales Section */}
                 <div className="mb-6 px-6">
-                    <h2 className="text-lg font-bold text-gray-900 mb-4">Latest sales</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 text-left">Latest sales</h2>
 
                     <div className="flex gap-3 mb-4 bg-white rounded-xl p-1">
                         {['Day', 'Week', 'Month'].map(tab => (
@@ -74,7 +56,6 @@ const MobileDashboard = () => {
                         </button>
                     </div>
 
-                    {/* Product List */}
                     <div className="space-y-3">
                         {sales.map((product, idx) => (
                             <ProductItem key={idx} {...product} />
