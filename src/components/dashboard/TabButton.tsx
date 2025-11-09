@@ -12,7 +12,7 @@ const TabButton: React.FC<TabButtonProps> = ({ active = false, children, onClick
       onClick={onClick}
       className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
         active
-          ? "bg-gray-900 text-white shadow-lg"
+          ? "bg-white text-black shadow-lg"
           : "bg-transparent text-gray-400 hover:text-gray-600"
       }`}
     >

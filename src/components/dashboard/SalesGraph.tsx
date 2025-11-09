@@ -17,7 +17,6 @@ export const SalesGraph: React.FC = () => {
           </div>
         </div>
         
-        {/* Graph Placeholder */}
         <div className="w-full h-64 bg-gray-100 rounded-xl flex items-center justify-center">
           Graph Content
         </div>

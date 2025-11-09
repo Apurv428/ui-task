@@ -1,6 +1,5 @@
 import { Search } from '../components/icons';
 
-// UI Components
 import { UserProfile } from '../components/dashboard/UserProfile';
 import { Sidebar } from '../components/dashboard/Sidebar';
 import { MessageList } from '../components/dashboard/MessageList';
