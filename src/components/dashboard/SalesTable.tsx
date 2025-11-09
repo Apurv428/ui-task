@@ -42,11 +42,10 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
                 </div>
             </CardHeader>
 
-
-            <CardContent className="p-0">
-                <div className="overflow-x-auto">
+             <CardContent className="p-0 flex-1 overflow-hidden flex flex-col">
+                <div className="overflow-x-auto flex-1 flex flex-col">
                     <table className="w-full border-collapse border-spacing-0">
-                        <thead className="bg-gray-50">
+                        <thead className="bg-gray-50 sticky top-0 z-10">
                             <tr>
                                 <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 tracking-wider">Product</th>
                                 <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 tracking-wider">Customer</th>
@@ -56,53 +55,57 @@ export const SalesTable: FC<SalesTableProps> = ({ sales }) => {
                                 <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 tracking-wider">Total</th>
                             </tr>
                         </thead>
-
-                        <tbody className="bg-white">
-                            {currentSales.map((sale) => (
-                                <tr key={sale.id} className="hover:bg-gray-50 transition-colors">
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <div className="flex items-center space-x-3">
-                                            <img src={sale.image} alt={sale.product} className="w-12 h-12 rounded-xl object-cover" />
-                                            <div>
-                                                <div className="font-medium text-gray-900">{sale.product}</div>
-                                                <div className="text-sm text-gray-500">{sale.productId}</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-left">
-                                        <div className="font-medium text-gray-900">{sale.customer}</div>
-                                        <div className="text-sm text-gray-500">{sale.email}</div>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-left">
-                                        <div className="font-medium text-gray-900">{sale.delivery}</div>
-                                        <div className="text-sm text-gray-500">{sale.address}</div>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <Badge
-                                            variant={
-                                                sale.status === 'Shipped'
-                                                    ? 'default'
-                                                    : sale.status === 'Processing'
-                                                        ? 'warning'
-                                                        : 'error'
-                                            }
-                                        >
-                                            {sale.status}
-                                        </Badge>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-900 font-medium">
-                                        ${Number(sale.shipping.replace('$', '')).toFixed(2)}
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-900 font-bold">
-                                        ${Number(sale.total.replace('$', '')).toFixed(2)}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
                     </table>
-
+                    
+                    <div className="flex-1 overflow-y-auto">
+                        <table className="w-full border-collapse border-spacing-0">
+                            <tbody className="bg-white">
+                                {currentSales.map((sale) => (
+                                    <tr key={sale.id} className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div className="flex items-center space-x-3">
+                                                <img src={sale.image} alt={sale.product} className="w-12 h-12 rounded-xl object-cover" />
+                                                <div className="flex flex-col space-x-3">
+                                                    <div className="font-medium text-gray-900">{sale.product}</div>
+                                                    <div className="text-sm text-gray-500 text-left">{sale.productId}</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-left">
+                                            <div className="font-medium text-gray-900">{sale.customer}</div>
+                                            <div className="text-sm text-gray-500">{sale.email}</div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-left">
+                                            <div className="font-medium text-gray-900">{sale.delivery}</div>
+                                            <div className="text-sm text-gray-500">{sale.address}</div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <Badge
+                                                variant={
+                                                    sale.status === 'Shipped'
+                                                        ? 'default'
+                                                        : sale.status === 'Processing'
+                                                            ? 'warning'
+                                                            : 'error'
+                                                }
+                                            >
+                                                {sale.status}
+                                            </Badge>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-gray-900 font-medium">
+                                            ${Number(sale.shipping.replace('$', '')).toFixed(2)}
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-gray-900 font-bold">
+                                            ${Number(sale.total.replace('$', '')).toFixed(2)}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </CardContent>
+
 
             <CardFooter className="flex items-center justify-between">
                 <Button

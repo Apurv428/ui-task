@@ -63,7 +63,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$180.00',
     shipping: '$28.00',
     total: '$208.00',
-    image: 'https://images.unsplash.com/photo-1587825140708-42e02a0b1d71?w=100&h=100&fit=crop',
+    image: 'https://m.media-amazon.com/images/I/71gFkTZ1YmL.jpg',
   },
   {
     id: 'ID 10-3786-23',
@@ -93,7 +93,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$560.00',
     shipping: '$18.00',
     total: '$578.00',
-    image: 'https://images.unsplash.com/photo-1517430816045-df4b7de165a5?w=100&h=100&fit=crop',
+    image: 'https://w3.fonua.com/wp-content/uploads/2023/08/mac.png',
   },
   {
     id: 'ID 10-5468-19',
@@ -108,7 +108,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$340.00',
     shipping: '$34.00',
     total: '$374.00',
-    image: 'https://images.unsplash.com/photo-1581091215364-8a3e6b0a80f0?w=100&h=100&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPXXBDLC8Cjb1rM2D1_jfNe-fuN7vQp1aGLw&s',
   },
   {
     id: 'ID 10-4870-14',
@@ -153,7 +153,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$1200.00',
     shipping: '$30.00',
     total: '$1230.00',
-    image: 'https://images.unsplash.com/photo-1606813909385-7d0b4f2338c0?w=100&h=100&fit=crop',
+    image: 'https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?fm=jpg&w=100&h=100&fit=crop',
   },
   {
     id: 'ID 10-5510-02',
@@ -198,7 +198,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$700.00',
     shipping: '$15.00',
     total: '$715.00',
-    image: 'https://images.unsplash.com/photo-1579425696319-6f32011b9e60?w=100&h=100&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYCSl2vflwl73R3aCw3GFxE5nXFfoZEhMMA&s',
   },
   {
     id: 'ID 10-5540-05',
@@ -213,7 +213,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$1100.00',
     shipping: '$50.00',
     total: '$1150.00',
-    image: 'https://images.unsplash.com/photo-1612831455542-9c0be0d4db49?w=100&h=100&fit=crop',
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000',
   },
   {
     id: 'ID 10-5550-06',
@@ -243,7 +243,7 @@ const [sales] = useState<Sale[]>([
     subtotal: '$2200.00',
     shipping: '$60.00',
     total: '$2260.00',
-    image: 'https://images.unsplash.com/photo-1587825140708-42e02a0b1d71?w=100&h=100&fit=crop',
+    image: 'https://s3b.cashify.in/gpro/uploads/2022/01/31195010/razer-blade-stealth-rz09-01963e31-r3u1-ultrabook-core-i7-7th-gen-16-gb-256-gb-ssd-windows-10-extra.jpg',
   },
 ]);
 
